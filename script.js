@@ -4,9 +4,10 @@ const amt1 = document.getElementById("amount-one");
 const amt2 = document.getElementById("amount-two");
 
 const swap = document.getElementById("swap");
-//fetch and update dom
 
-function calc () {
+amt1.focus();                                                     
+//fetch and update dom
+function calc () {                                                      //calculates the output value
 const currency1 = curr1.value;
 const currency2 = curr2.value;
 fetch(` https://v6.exchangerate-api.com/v6/4e10ee2ecd48943030195476/latest/${currency1}`)
