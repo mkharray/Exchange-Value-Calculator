@@ -11,10 +11,11 @@ function calc () {                                                      //calcul
 const currency1 = curr1.value;
 const currency2 = curr2.value;
 fetch(` https://v6.exchangerate-api.com/v6/4e10ee2ecd48943030195476/latest/${currency1}`)
- .then(res => res.json())
- .then(data => {
-    rate = data.conversion_rates[currency2];
-
+ .then( function (res) {
+     return res.json();
+ })
+ .then(function (data) {
+    let rate = data.conversion_rates[currency2];
     amt2.value = (amt1.value * rate).toFixed(4);
  });
 }
